@@ -1,0 +1,76 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    animation: fire 1s infinite;
+    font-family: "Arial", sans-serif;
+    
+    color: rgb(247, 168, 22);
+  }
+  
+  @keyframes fire {
+      0% {
+        text-shadow: 
+        0 0 5px #c48a0c, 
+        0 0 10px #c48a0c, 
+        0 0 20px #c48a0c, 
+        0 0 30px #c48a0c, 
+        0 0 40px #c48a0c, 
+        0 0 50px #c48a0c, 
+        0 0 75px #c48a0c;
+      }
+    }
+
+.container label{
+    color: #e9ad09;
+    font-weight: 700;
+    text-align: center;
+    margin: 5px 10px;
+
+}
+.container input{
+    margin: 5px 10px;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 168, 22);
+    padding: 150px 13px;
+    border: aqua 8px groove;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 350px;
+
+}
+  
+.container button { 
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border-color: aqua;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    background-color: rgb(10, 10, 10);
+    color: #e9ad09;
+    font-weight: 700;
+    transition: 1.5s;
+    margin: 25px 10px;
+    box-shadow: 0px 0px 60px #e9a914;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+.container button:active {
+    scale: 0.92;
+}
+.container button:hover {
+    background: rgb(2, 29, 78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, #1fd7e8df 60%);
+    color: rgb(4, 4, 38);
+    box-shadow: 6px 6px 60px #e9a914;
+}

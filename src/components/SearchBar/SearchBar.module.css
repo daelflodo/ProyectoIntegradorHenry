@@ -1,0 +1,48 @@
+.container {
+    background-image:linear-gradient(105deg,rgba(212, 11, 219, 0.416),rgba(0, 0, 255, 0.485),rgba(197, 14, 233, 0.571)) ;
+    border-radius: 1rem;
+    padding: 1rem;
+    float: inline-end;
+}
+.container input {
+    line-height: 2.5rem;
+    border: 2px solid transparent;
+    border-bottom-color: #0aa7c0a7;
+    padding: .2rem 0;
+    outline: none;
+    background-color: transparent;
+    color: rgb(233, 173, 9);
+    transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.container input:hover {
+    padding: .2rem 1rem;
+    border-radius: 1rem;
+    border-color: #0aa7c0a7;
+    box-shadow: 0px 0px 60px #e9a914;
+}
+
+.container button { 
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-color: aqua;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    background-color: rgb(10, 10, 10);
+    color: rgb(233, 173, 9);
+    font-weight: 700;
+    transition: 1.5s;
+    box-shadow: 0px 0px 60px #e9a914;
+    /* box-shadow: 0px 0px 60px #1f4c65; */
+    /* -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); */
+}
+.container button:active {
+    scale: 0.92;
+}
+.container button:hover {
+    background: rgb(2, 29, 78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+    box-shadow: 6px 6px 60px #e9a914;
+}

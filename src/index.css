@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  /* background-image: url("https://www.xtrafondos.com/descargar.php?id=3057&resolucion=1920x1080"); */
+  /* background-image: url("https://www.xtrafondos.com/descargar.php?id=6243&resolucion=3840x2160"); */
+  /* background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-dazzling-neon-light-advertising-background-picture-image_978372.jpg"); */
+  /* background-image: url("https://www.wallpaperuse.com/wallp/1-14079_m.jpg"); */
+  background-size: cover;
+  /* width: 100%;
+  height: 100%; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

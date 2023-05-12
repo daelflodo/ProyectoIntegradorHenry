@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    border: rgb(196, 138, 12) 8px groove;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin: 0.5%;
+}
+.container img{
+    width: 25%;
+    padding: 1.5rem;
+}
+  .container div {
+    width: 70%;
+    margin: 2rem;
+    color: #ea1515; /* Color del texto */
+    font-size: 36px; /* Tamaño de la fuente */
+    text-shadow: 
+    0 0 10px #fff, 
+    0 0 20px #fff, 
+    0 0 30px #fff, 
+    0 0 40px #ff00de, 
+    0 0 70px #ff00de, 
+    0 0 80px #ff00de, 
+    0 0 100px #ff00de, 
+    0 0 150px #ff00de; /* Sombra de texto */
+    animation: neon-animation 3.5s ease-in-out infinite alternate; /* Animación del efecto neon */
+  }
+  
+  @keyframes neon-animation {
+    0% {
+      text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #fff, 
+      0 0 30px #fff, 
+      0 0 40px #ff00de, 
+      0 0 70px #ff00de, 
+      0 0 80px #ff00de, 
+      0 0 100px #ff00de, 
+      0 0 150px #ff00de;
+      opacity: 1; /* Opacidad inicial */
+    }
+    50% {
+      opacity: 0; /* Opacidad reducida */
+    }
+    100% {
+      text-shadow: 
+      0 0 5px #fff, 
+      0 0 10px #fff, 
+      0 0 15px #fff, 
+      0 0 20px #ff00de, 
+      0 0 35px #ff00de, 
+      0 0 40px #ff00de, 
+      0 0 50px #ff00de, 
+      0 0 75px #ff00de;
+      opacity: 1; /* Opacidad restablecida */
+    }
+  }
+
+ 

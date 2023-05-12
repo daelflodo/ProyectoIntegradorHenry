@@ -1,0 +1,30 @@
+.container{
+  padding: 2rem;
+   display: flex;
+   justify-content: center;
+   margin-right: 2rem;
+  
+}
+
+.container button { 
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border-color: #e9a914;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  background-color: rgb(10, 10, 10);
+  color: rgb(233, 173, 9);
+  font-weight: 700;
+  transition: 1.5s;
+  margin-right: 5px;
+}
+.container button:active {
+  scale: 0.92;
+}
+.container button:hover {
+  background: rgb(2, 29, 78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+  box-shadow: 6px 6px 60px #e9a914;
+}
+
