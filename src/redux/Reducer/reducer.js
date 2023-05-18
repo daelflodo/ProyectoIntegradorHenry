@@ -12,23 +12,24 @@ const rootReducer = (state = initialState, { type, payload }) => {
                 allCharacters: [...state.allCharacters, payload]
             }
         case REMOVE_FAV:
-
+            const filter = state.myFavorites.filter(fav => fav.id !== payload)
             return {
                 ...state,
-                myFavorites: state.myFavorites.filter(fav => fav.id !== payload)
+                myFavorites: filter,//
+                allCharacters: filter
             }
         case FILTER:
 
-            const filterAllCharacters = state.allCharacters.filter((char) => char.gender === payload)
+            const filterAllCharacters = state.allCharacters.filter((char) => char.gender === payload)//state.allcharacters
             return {
                 ...state,
                 myFavorites:
                     payload === 'AllCharacters'
-                    ? state.allCharacters : filterAllCharacters
+                        ? state.allCharacters : filterAllCharacters
             }
         case ORDER:
             // let filterGender = state.allCharacters.filter((char) => char.gender == payload)
-            const allCharacterscopy = [...state.allCharacters] //una copiad e mi estado global allcharacter
+            const allCharacterscopy = [...state.myFavorites] //una copiad e mi estado global allcharacter
             return {
                 ...state,
                 myFavorites:

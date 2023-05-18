@@ -29,7 +29,7 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
    return (
       <div className={style.componente}>
          <button onClick={handleFavorite}>{isFav ? '❤️' : '🤍'}</button>
-         <button onClick={() => onClose(id)}>X</button>
+         {onClose&&<button onClick={() => onClose(id)}>X</button>}
          <br />
          <Link to={`/detail/${id}`}>
             <h1 className={style.fire}>{name}</h1>

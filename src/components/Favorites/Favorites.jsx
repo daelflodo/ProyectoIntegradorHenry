@@ -25,17 +25,16 @@ const Favorites = ({ myFavorites }) => {
             </select>
 
             <select onChange={handleFilter} >
+                <option value='AllCharacters'>All Characters</option>
                 <option value='Male'>Male</option>
                 <option value='Female'>Female</option>
                 <option value='Genderless'>Genderless</option>
                 <option value='unknown'>unknown</option>
-                <option value='AllCharacters'>All Characters</option>
             </select>
             <div className={style.container}>
                 {
                     myFavorites?.map(({ id, name, status, species, gender, origin, image }) => {
                         return (
-
                             <Card
                                 key={id}// es un identificador para react 
                                 id={id}//es un identificador para el programador
@@ -47,9 +46,7 @@ const Favorites = ({ myFavorites }) => {
                                 image={image}
 
                             />
-
                         )
-
                     })
                 }
             </div>
