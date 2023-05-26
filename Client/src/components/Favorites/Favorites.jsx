@@ -35,6 +35,7 @@ const Favorites = ({ myFavorites }) => {
                 {
                     myFavorites?.map(({ id, name, status, species, gender, origin, image }) => {
                         return (
+
                             <Card
                                 key={id}// es un identificador para react 
                                 id={id}//es un identificador para el programador
@@ -44,9 +45,10 @@ const Favorites = ({ myFavorites }) => {
                                 gender={gender}
                                 origin={origin.name}
                                 image={image}
-
                             />
+
                         )
+
                     })
                 }
             </div>

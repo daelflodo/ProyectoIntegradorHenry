@@ -14,7 +14,7 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
          removeFav(id)
       } else {
          setIsFav(true)
-         addFav({ id, name, status, species, gender, origin, image })
+         addFav({ id, name, status, species, gender, origin, image,onClose })
       }
    }
    useEffect(() => {
@@ -28,6 +28,7 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
 
    return (
       <div className={style.componente}>
+         {/* <h4>{id}</h4> */}
          <button onClick={handleFavorite}>{isFav ? '❤️' : '🤍'}</button>
          {onClose&&<button onClick={() => onClose(id)}>X</button>}
          <br />
@@ -35,10 +36,12 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
             <h1 className={style.fire}>{name}</h1>
          </Link>
          <img src={image} alt="" />
-         <h3>Status: {status}</h3>
-         <h3>Species: {species}</h3>
+           {status==='Dead'
+           ? <h3 style={{ color: "red" }}>Status: {status}</h3> 
+           : <h3 style={{ color: "green" }}>Status: {status}</h3>}
+         {/* <h3>Species: {species}</h3>
          <h3>Gender: {gender}</h3>
-         <h3>Origin: {origin}</h3>
+         <h3>Origin: {origin}</h3> */}
 
       </div>
    );

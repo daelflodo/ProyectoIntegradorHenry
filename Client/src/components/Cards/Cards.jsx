@@ -5,7 +5,7 @@ export default function Cards({characters,onClose}) {
    return (
       <div className={style.componente}>
         {
-         characters.map(({id,name, status, species, gender, origin,image}) => {  
+         characters.map(({id,name, status, species, gender, origin,image,}) => {  
          return( 
             <Card 
                key={id}// es un identificador para react 
