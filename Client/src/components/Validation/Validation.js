@@ -17,6 +17,12 @@ const validation = (userData)=>{
     if (userData.password.length < 6 || userData.password.length > 10) {
         errors.password='la contraseña debe tener un tamaño entre 6 y 10 caracteres '
     }
+    if (userData.user.length < 4) {
+        errors.email='El nombre de usuario debe ser mayor a los 4 caracteres'
+    }
+
+
+
 
     return errors;
 }

@@ -4,7 +4,7 @@ const initialState = {
     myFavorites: [],
     allCharacters: []
 }
-const rootReducer = (state = initialState, { type, payload,pepi }) => {
+const rootReducer = (state = initialState, { type, payload,id }) => {
     switch (type) {
         case ADD_FAV:
             return {
@@ -13,28 +13,13 @@ const rootReducer = (state = initialState, { type, payload,pepi }) => {
                   allCharacters: payload 
                 };
 
-        // case ADD_FAV:
-        //     return {
-        //         ...state,
-        //         myFavorites: [...state.myFavorites, payload],
-        //         allCharacters: [...state.allCharacters, payload]
-        //     }
-
         case REMOVE_FAV: 
-        const filter2 = state.myFavorites.filter((user) => user.id !== pepi)   
+        const filter2 = state.myFavorites.filter((user) => user.id !== id)   
             return {
                  ...state, 
                  myFavorites: filter2,
                  allCharacters: payload };
 
-        // case REMOVE_FAV:
-        //     const filter =state.myFavorites.filter(fav => fav.id !== payload)
-        //     const filter2 =state.allCharacters.filter(fav => fav.id !== payload)
-        //     return {
-        //         ...state,
-        //         myFavorites:filter ,//
-        //         allCharacters: filter2
-        //     }
         case FILTER:
 
             const filterAllCharacters = state.allCharacters.filter((char) => char.gender === payload)
@@ -45,8 +30,7 @@ const rootReducer = (state = initialState, { type, payload,pepi }) => {
                         ? state.allCharacters : filterAllCharacters
             }
         case ORDER:
-            // let filterGender = state.allCharacters.filter((char) => char.gender == payload)
-            const allCharacterscopy = [...state.myFavorites] //una copiad e mi estado global allcharacter
+            const allCharacterscopy = [...state.myFavorites]
             return {
                 ...state,
                 myFavorites:

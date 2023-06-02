@@ -1,7 +1,10 @@
 import SearchBar from "../SearchBar/SearchBar"
 import { Link, useNavigate } from "react-router-dom"
 import style from './Nav.module.css'
+import { useLocation } from "react-router-dom"
 const Nav = ({ onSearch, setAccess }) => {//recibe como propiedad la funcion onSearch
+
+    const location = useLocation()
 
     const navigate = useNavigate()
     const handlelog = () => {
@@ -11,8 +14,9 @@ const Nav = ({ onSearch, setAccess }) => {//recibe como propiedad la funcion onS
 
     return (
         <div className={style.container}>
+
             <nav >
-                <SearchBar className={style.search} onSearch={onSearch} />
+                {location.pathname === '/home' && <SearchBar className={style.search} onSearch={onSearch} />}
                 <br />
                 <Link to='/about' >
                     <button>About</button>

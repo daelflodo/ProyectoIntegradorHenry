@@ -4,7 +4,7 @@ const router = require('./routes/index')
 const morgan = require('morgan')
 
 server.use(morgan('dev'))
-server.use(express.json())// la informacion que llega en formato json la pasa a objeto 
+server.use(express.json())
 
 server.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*');

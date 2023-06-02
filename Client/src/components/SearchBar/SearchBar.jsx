@@ -13,7 +13,7 @@ const SearchBar = ({ onSearch }) => {
             placeholder="Search"
          />
 
-         <button onClick={() => { onSearch(id); setId("") }}>Agregar</button>
+         <button onClick={() => { onSearch(id); setId("") }}>Add</button>
       </div>
    );
 }
